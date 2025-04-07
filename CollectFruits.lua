@@ -25,7 +25,7 @@ else
     FireRemote("SetTeam", "Marines") 
     warn("Time inválido ou não definido. Entrando na Marinha por padrão.")
 end
-
+wait(10)
 local function Tween(targetPosition)
 gettween = true
     local player = game.Players.LocalPlayer
