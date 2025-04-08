@@ -3275,7 +3275,7 @@ end
 		  while true do
 		     task.wait()
 		       if _G.AutoTrial then
-		if game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible then
+		if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(-20010.763671875, 10009.400390625, -25.764007568359375)).Magnitude < 500 then
 		if game:GetService("Players").LocalPlayer.Data.Race.Value == "Cyborg" then
 		        Tween(Vector3.new(28286, 14897, 103))
 		        Tween(Vector3.new(28286, 14897, 103))
