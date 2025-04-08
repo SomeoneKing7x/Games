@@ -3271,7 +3271,7 @@ end
 		Callback = function(Value)
 		_G.AutoTrial = Valeu
 		end})
-		task.spawn(function()
+		spawn(function()
 	while true do
 		task.wait() -- reduz a carga do loop
 	   	if _G.AutoTrial then
