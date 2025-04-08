@@ -3271,20 +3271,26 @@ end
 		Callback = function(Value)
 		_G.AutoTrial = Valeu
 		end})
-		spawn(function()
-		  while true do
-		     task.wait()
-		       if _G.AutoTrial then
-		if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(-20010.763671875, 10009.400390625, -25.764007568359375)).Magnitude < 500 then
-		if game:GetService("Players").LocalPlayer.Data.Race.Value == "Cyborg" then
-		        Tween(Vector3.new(28286, 14897, 103))
-		        Tween(Vector3.new(28286, 14897, 103))
-		        Tween(Vector3.new(28286, 14897, 103))
-		       end
-		    end
+		task.spawn(function()
+	while true do
+		task.wait(0.5) -- reduz a carga do loop
+
+		if _G.AutoTrial then
+			local player = game.Players.LocalPlayer
+			local character = player.Character
+			local humanoidRootPart = character and character:FindFirstChild("HumanoidRootPart")
+
+			if humanoidRootPart then
+				local distancia = (humanoidRootPart.Position - Vector3.new(-20010.763671875, 10009.400390625, -25.764007568359375)).Magnitude
+
+				if distancia < 500 and player.Data.Race.Value == "Cyborg" then
+					local destino = Vector3.new(28286, 14897, 103)
+					Tween(destino)
+				end
+			end
 		end
 	end
- end)
+end)
 --—————— Stats ——————
 
 
