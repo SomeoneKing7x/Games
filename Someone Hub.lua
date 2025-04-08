@@ -3265,7 +3265,7 @@ end
 	
 	
 	
-	Tween(Vector3.new(-20009, 9953, -9))
+	
 	Race:AddToggle({
 		Title = "Auto Complete Trial",
 		Callback = function(Value)
